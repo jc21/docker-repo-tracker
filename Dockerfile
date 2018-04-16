@@ -1,5 +1,8 @@
 FROM alpine:3.5
 
+MAINTAINER Jamie Curnow <jc@jc21.com>
+LABEL maintainer="Jamie Curnow <jc@jc21.com>"
+
 RUN echo "fs.file-max = 65535" > /etc/sysctl.conf
 RUN apk update && apk upgrade \
     && apk add --no-cache bash openssh curl git \
